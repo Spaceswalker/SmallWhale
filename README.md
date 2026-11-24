@@ -5,6 +5,10 @@ An AI companion for QQ that keeps long-term memory, speaks in short human senten
 > 中文版 / Chinese version: [README.zh-CN.md](README.zh-CN.md)
 > Install guides under `docs/` are written in Chinese.
 
+> **Status: early test build.** This is the version I use every day while I keep fixing it.
+> The first stable release is planned for **mid-2027**. File layout, config keys and plugin
+> behaviour can change before then — read it, run it, but do not treat it as production-ready.
+
 **What this is.** XiaoJing is not a boxed application you double-click. It is a reproducible engineering setup: a chat brain that keeps long-term memory and speaks in short, human sentences, plus a small army of watchdog scripts that keep the whole chain alive. Everything that took weeks of trial and error — the memory pipeline, the persona hygiene rules, the port wiring, the version guards — is written down here as code and documentation.
 
 **Why it feels different.** Most "AI companion" projects stop at a system prompt. This one treats memory as a first-class subsystem: every day gets a first-person diary entry written only from that day's real conversations, those entries are injected into the system prompt (not left to retrieval luck), and the model is explicitly told that anything not in the record did not happen — so it answers "I don't remember" instead of inventing a story. On top of that, a two-layer language filter strips the tell-tale stock phrases that make bots sound like bots, while a set of real, hand-picked example sentences keeps the voice short, dry and human.
