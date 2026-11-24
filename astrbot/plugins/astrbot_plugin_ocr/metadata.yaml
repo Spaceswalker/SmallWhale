@@ -1,0 +1,38 @@
+name: astrbot_plugin_ocr
+display_name: 本地 OCR 识图
+short_desc: 用 Windows 自带 OCR 把图片里的文字读进对话，不需要视觉模型
+desc: |
+  她收到的图片会先用 Windows.Media.Ocr 把图里的文字读出来，再作为一段临时上下文交给模型。
+
+  - 能读：截图、聊天记录、文档、表格、手写（清晰时）里的字。
+  - 读不出：画面内容、表情、颜色、谁在做什么。
+  - 没认出字时会明确写「没有识别到文字」，让她别猜。
+
+  不上传任何图片到云端，全部在本机完成；不需要额外 API Key。
+
+  可选：配置视觉模型（OpenAI 兼容接口，如智谱 glm-4v-flash 或硅基流动 qwen2.5-vl），
+  启用后先让视觉模型描述画面，再叠加 OCR 文字；没配或失败时自动回落纯 OCR。
+version: "1.1.0"
+author: "XiaoJing contributors"
+astrbot_version: ">=4.4.0,<5"
+config:
+  - id: enabled
+    title: 启用 OCR 识图
+    type: bool
+    default: true
+  - id: vision_enabled
+    title: 启用视觉模型（没有完整 Key 时保持关闭）
+    type: bool
+    default: false
+  - id: vision_model
+    title: 视觉模型名（如 glm-4v-flash / qwen2.5-vl-7b-instruct）
+    type: string
+    default: ""
+  - id: vision_base_url
+    title: 视觉接口地址（OpenAI 兼容，如 https://open.bigmodel.cn/api/paas/v4）
+    type: string
+    default: ""
+  - id: vision_api_key
+    title: 视觉接口 Key（形如 id.secret 的完整串）
+    type: string
+    default: ""

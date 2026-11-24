@@ -1,0 +1,30 @@
+{
+  "_comment": "AstrBot 关键配置样例，字段以你安装的版本为准；只放结构参考，不要直接覆盖",
+  "provider": [
+    {
+      "id": "deepseek",
+      "type": "openai",
+      "provider_type": "openai_chat_completion",
+      "api_base": "https://api.deepseek.com/v1",
+      "model": "deepseek-chat",
+      "key": ["sk-你的key"],
+      "custom_extra_body": { "temperature": 0.95 }
+    }
+  ],
+  "platform": [
+    {
+      "type": "aiocqhttp",
+      "enable": true,
+      "ws_reverse_host": "0.0.0.0",
+      "ws_reverse_port": 6199
+    }
+  ],
+  "agent_runner": {
+    "compression": {
+      "max_turns": 26,
+      "trim_turns": 2,
+      "overflow_strategy": "llm_compress",
+      "keep_recent_ratio": 0.3
+    }
+  }
+}

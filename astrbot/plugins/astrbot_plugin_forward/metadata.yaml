@@ -1,0 +1,18 @@
+name: astrbot_plugin_forward
+desc: 展开 QQ 合并转发（聊天记录），把里面的内容读进这一轮对话
+version: 1.1.0
+author: "XiaoJing contributors"
+repo: ""
+config:
+  enabled:
+    type: bool
+    default: true
+    desc: 是否展开合并转发的聊天记录
+  max_chars:
+    type: int
+    default: 2500
+    desc: 展开后最多塞进上下文的字数
+  max_forwards:
+    type: int
+    default: 2
+    desc: 一条消息里最多展开几个转发卡片

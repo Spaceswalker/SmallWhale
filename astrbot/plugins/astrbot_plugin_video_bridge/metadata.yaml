@@ -1,0 +1,6 @@
+name: astrbot_plugin_video_bridge
+display_name: 视频素材桥
+desc: 把 QQ 里转发的 B 站视频变成她能聊的内容（本地取字幕/热评，不替她说话）
+version: 1.0.0
+author: "XiaoJing contributors"
+repo: ""

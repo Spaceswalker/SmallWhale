@@ -1,0 +1,30 @@
+{
+  "network": {
+    "httpServers": [
+      {
+        "name": "xj-http",
+        "enable": true,
+        "host": "127.0.0.1",
+        "port": 6180,
+        "enableCors": false,
+        "enableWebsocket": false,
+        "messagePostFormat": "array",
+        "token": "",
+        "debug": false
+      }
+    ],
+    "websocketClients": [
+      {
+        "name": "xj-reverse-ws",
+        "enable": true,
+        "url": "ws://127.0.0.1:6199/ws",
+        "reportSelfMessage": false,
+        "messagePostFormat": "array",
+        "token": "",
+        "debug": false
+      }
+    ]
+  },
+  "musicSignUrl": "",
+  "enableLocalFile2Url": false
+}
