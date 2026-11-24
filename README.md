@@ -97,6 +97,7 @@ An AI companion for QQ that keeps long-term memory, speaks in short human senten
 
 - This grew out of one person's daily use and constant tinkering: the parameters are tuned for a very specific use case, not general-purpose optima. Changing the model or the persona means re-tuning.
 - Third-party upstream parts are shipped as patches and instructions only, never as full re-distributions; fetch them under their own licenses.
+- Commit messages follow `<type>: <one line>` — see [docs/commit-style.md](docs/commit-style.md) and `scripts/commit.ps1`.
 
 ---
 
