@@ -7,9 +7,14 @@
 
 | 组件 | 用途 | 上游 | 协议 |
 | --- | --- | --- | --- |
-| AstrBot | QQ 侧对话框架 / 插件宿主 | <https://github.com/AstrBotDevs/AstrBot> | 见上游仓库 |
-| NapCat | QQ ↔ OneBot v11 适配 | <https://github.com/NapNeko/NapCatQQ> | 见上游仓库 |
+| AstrBot | QQ 侧对话框架 / 插件宿主 | <https://github.com/AstrBotDevs/AstrBot> | **AGPL-3.0**（上游 LICENSE，2026-11 核实） |
+| NapCat | QQ ↔ OneBot v11 适配 | <https://github.com/NapNeko/NapCatQQ> | **无许可证**（上游未发布 LICENSE，默认保留所有权利；仓库 README 现为 `## Ending`，Releases 已清空，Docker 镜像已下架） |
 | QQNT | 被 NapCat 注入的 QQ 客户端 | 腾讯 | 腾讯软件许可 |
+
+> 因为 NapCat 无许可证、且其本地整合包内附带腾讯 QQ 客户端，本仓库**不分发、不转发、不镜像**它的任何文件，
+> 也不转售、不打包 QQ。`docs/napcat.md` 只提供「如何自己获取 + 如何校验 + 如何接入 + 有哪些风险」。
+> 校验值见 `napcat/CHECKSUMS.txt`（对的是我们自测跑通的版本，不是官方承诺）。
+
 
 ## 二、`astrbot/plugins/astrbot_plugin_memories/`（**上游 MIT 插件的大幅修改版**）
 

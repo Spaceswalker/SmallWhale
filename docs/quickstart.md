@@ -8,8 +8,11 @@
 | --- | --- | --- |
 | Windows | 10/11 | 当前脚本是 PowerShell，Linux 需要自己改写 |
 | Python | 3.10+ | AstrBot 用 |
-| QQ（QQNT） | 建议锁一个版本 | NapCat 只适配部分版本，见 `napcat/` |
+| QQ（QQNT） | 建议锁一个版本 | NapCat 只适配部分版本，见 `docs/napcat.md` |
 | LLM API | OpenAI 兼容 | 在 AstrBot 里配 |
+
+> 两个上游都不在仓库里：**AstrBot 是 AGPL-3.0**，自己 clone 或下载；**NapCat 已停止维护、无许可证**，
+> 需要自己拿到并校验（见 `docs/napcat.md` 与 `napcat/CHECKSUMS.txt`）。本仓库不含任何二进制。
 
 目录建议（本仓库就是部署根目录）：
 
@@ -42,8 +45,13 @@ Copy-Item .\astrbot\plugins\* .\AstrBot\data\plugins\ -Recurse
 
 ## 2. NapCat
 
-按 `docs/napcat.md` 装好、登录小鲸的 QQ、把反向 WebSocket 指到
+**这一步要你自己解决**：NapCat 上游已停止维护、也没有发布许可证，所以本仓库不分发、不转发它。
+
+按 `docs/napcat.md` 自己拿到（社区镜像 / 社区分流 / 源码自建），先核对
+`napcat/CHECKSUMS.txt` 里的 SHA-256，再装、再登录小鲸的 QQ，把反向 WebSocket 指到
 `ws://127.0.0.1:6199/ws`。AstrBot 侧确认收到连接。
+
+> 不想走 NapCat 也行：任何能提供 OneBot v11 反向 WS 的实现都可以，接法一样。
 
 ## 3. 守护
 
