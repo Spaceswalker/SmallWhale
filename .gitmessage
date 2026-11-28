@@ -1,25 +1,25 @@
-# 提交说明模板（Commit message template）
+# Commit message template
 #
-# 第一行格式：<type>: <一句话说明>
+# First line: <type>: <short summary>
 #
-# 可用的 type：
-#   feat      新增功能 / 新文件
-#   fix       修 bug、修真机上的毛病
-#   docs      只改文档（README、docs/、注释）
-#   style     只改格式，不改行为（空格、缩进、改名）
-#   refactor  改结构但不改行为
-#   chore     杂项：依赖、脚本、配置
+# Allowed types:
+#   feat      new feature / new files
+#   fix       bug fix, including problems seen on a real machine
+#   docs      documentation only (README, docs/, comments)
+#   style     formatting only, no behaviour change (spaces, indentation, renaming)
+#   refactor  restructure without changing behaviour
+#   chore     housekeeping: dependencies, scripts, config
 #
-# 例子：
-#   feat: 主动消息加上「没话题就不发」的闸
-#   fix: 修 .gitignore 把 astrbot/ 一起忽略的问题
-#   docs: 补 NapCat 反向 WS 的排错步骤
+# Examples:
+#   feat: skip proactive messages when there is nothing to say
+#   fix: stop .gitignore from swallowing the astrbot/ directory
+#   docs: add troubleshooting steps for the NapCat reverse WebSocket
 #
-# 规则：
-#   1. 第一行不超过 60 个字，句尾不要句号
-#   2. 一件事一个提交，别把三件不相干的事塞进一条
-#   3. 需要解释的写在空行之后（本模板下面就是正文区）
+# Rules:
+#   1. Keep the first line under 60 characters, no trailing period
+#   2. One commit per change; do not mix unrelated work
+#   3. Put explanations below a blank line (the body area below)
 #
 # ------------------------------------------------------------------
-# 下面是正文（可留空）：为什么这么改、影响什么、怎么验证
+# Body (optional): why, what it affects, how it was verified
 #

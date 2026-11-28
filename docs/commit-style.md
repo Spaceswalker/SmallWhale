@@ -1,24 +1,24 @@
-# 提交说明怎么写
+# How to write commit messages
 
-本仓库的提交说明固定成 `<type>: <一句话>` 的形式。模板文件是仓库根目录的 `.gitmessage`。
+Every commit message in this repository follows `<type>: <short summary>`. The template lives in `.gitmessage` at the repo root.
 
-## 可用的 type
+## Allowed types
 
-| type | 什么时候用 |
+| type | When to use it |
 | --- | --- |
-| `feat` | 新增功能、新文件 |
-| `fix` | 修 bug、修机器上真出现过的毛病 |
-| `docs` | 只改文档：README、`docs/`、注释 |
-| `style` | 只改格式，不改行为：空格、缩进、重命名 |
-| `refactor` | 改结构但不改行为 |
-| `chore` | 杂项：依赖、脚本、配置 |
+| `feat` | new feature, new files |
+| `fix` | bug fix, including problems seen on a real machine |
+| `docs` | documentation only: README, `docs/`, comments |
+| `style` | formatting only, no behaviour change: spaces, indentation, renaming |
+| `refactor` | restructure without changing behaviour |
+| `chore` | housekeeping: dependencies, scripts, config |
 
-## 例子
+## Examples
 
 ```
-feat: 主动消息加上「没话题就不发」的闸
-fix: 修 .gitignore 把 astrbot/ 一起忽略的问题
-docs: 补 NapCat 反向 WS 的排错步骤
+feat: skip proactive messages when there is nothing to say
+fix: stop .gitignore from swallowing the astrbot/ directory
+docs: add troubleshooting steps for the NapCat reverse WebSocket
 ```
 
 ## 两个用法
